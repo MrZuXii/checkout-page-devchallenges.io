@@ -1,0 +1,33 @@
+.btn {
+  background: var(--color-orange);
+  border-radius: 1.2rem;
+  border: none;
+  color: var(--color-white);
+  padding: 1.7rem 4.5rem;
+  align-self: flex-end;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.5s all ease-in-out;
+
+  color: #fff;
+  background-image: linear-gradient(
+    45deg,
+    transparent 49%,
+    #de893f 50%,
+    #de893f 55%,
+    transparent 56%
+  );
+  background-position: 100%;
+  background-size: 300%;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  }
+
+  &:hover {
+    // background-position: 0;
+    transform: scale(1.025);
+    animation: button 1.25s infinite;
+  }
+}

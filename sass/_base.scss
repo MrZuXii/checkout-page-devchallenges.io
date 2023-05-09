@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;700&display=swap");
+
+:root {
+  --color-white: #fff;
+  --color-gray-1: #f2f2f2;
+  --color-gray-2: #e0e0e0;
+  --color-gray-3: #bdbdbd;
+  --color-gray-4: #828282;
+  --color-gray-5: #4e5150;
+  --color-gray-6: #4f4f4f;
+  --color-gray-7: #333333;
+  --color-orange: #f2994a;
+  --color-red: #c92a2a;
+  --color-green: #2b8a3e;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == low {
+    @media only screen and (min-width: 25em) {
+      @content;
+    } //400px
+  }
+  @if $breakpoint == medium {
+    @media only screen and (min-width: 50em) {
+      @content;
+    } //800px
+  }
+  @if $breakpoint == high {
+    @media only screen and (min-width: 62.5em) {
+      @content;
+    } //1000px
+  }
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  box-sizing: inherit;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(low) {
+    font-size: calc(62.5% + 0.15vw);
+  }
+
+  @include respond(medium) {
+    font-size: 70%;
+  }
+
+  @include respond(high) {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-weight: 600;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+}
+
+::selection {
+  background-color: var(--color-gray-4);
+  color: var(--color-gray-1);
+}

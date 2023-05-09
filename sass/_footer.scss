@@ -1,0 +1,13 @@
+.footer {
+  font-size: 1.4rem;
+  text-align: center;
+
+  color: var(--color-gray-3);
+  padding-bottom: 2.4rem;
+
+  a:link,
+  a:visited {
+    font-weight: 700;
+    color: inherit;
+  }
+}

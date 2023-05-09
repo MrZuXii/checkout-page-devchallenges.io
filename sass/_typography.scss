@@ -1,0 +1,17 @@
+.heading-primary {
+  color: var(--color-gray-5);
+  font-size: 2.4rem;
+
+  @include respond(medium) {
+    font-size: 3rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 1.4rem;
+  color: var(--color-gray-7);
+
+  @include respond(medium) {
+    font-size: 1.5rem;
+  }
+}

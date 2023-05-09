@@ -1,0 +1,113 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4rem;
+  max-width: 465px;
+
+  // Contact
+  &__contact {
+    padding-bottom: 4.5rem;
+  }
+
+  &__address {
+    padding-bottom: 2rem;
+  }
+
+  &__group-double {
+    display: grid;
+    gap: 2.3rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__label {
+    color: var(--color-gray-6);
+    font-size: 1rem;
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-top: 1.6rem;
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  &__field {
+    color: var(--color-gray-4);
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__icon {
+    font-size: 1.7rem;
+    position: absolute;
+    left: 0.7rem;
+
+    &-more {
+      position: absolute;
+      right: 0.7rem;
+      width: 21px;
+      height: 21px;
+      display: inline-block;
+      background-color: var(--color-gray-2);
+      color: var(--color-gray-4);
+      border-radius: 4px;
+      text-align: center;
+      text-align: center;
+      font-size: 21px;
+      pointer-events: none;
+    }
+  }
+
+  &__input {
+    border: 1px solid var(--color-gray-4);
+    width: 100%;
+    color: var(--color-gray-7);
+    padding: 1rem;
+    padding-left: 3rem;
+    border-radius: 1.2rem;
+    font-size: 1.2rem;
+
+    &::placeholder {
+      color: var(--color-gray-4);
+    }
+
+    &:focus {
+      border: 1px solid transparent;
+      outline: 2px solid var(--color-gray-4);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+
+      &:valid {
+        border: 1px solid transparent;
+        outline: 2px solid var(--color-green);
+        color: var(--color-green);
+
+        & + .form__icon {
+          color: var(--color-green);
+        }
+      }
+
+      &:invalid {
+        border: 1px solid transparent;
+        outline: 2px solid var(--color-red);
+        color: var(--color-red);
+
+        & + .form__icon {
+          color: var(--color-red);
+        }
+      }
+    }
+  }
+
+  &__select {
+    appearance: none;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    margin-top: 1.7rem;
+    gap: 0.8rem;
+  }
+}

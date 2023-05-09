@@ -1,0 +1,19 @@
+.container {
+  margin: 3.2rem auto;
+  width: 93.5%;
+  max-width: 475px;
+
+  @include respond(medium) {
+    max-width: 1000px;
+  }
+}
+
+.main {
+  @include respond(medium) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 7rem;
+    align-items: flex-start;
+  }
+}
